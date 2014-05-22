@@ -25,6 +25,10 @@ public class WordGame {
 	}
 	
 	public void guess(String guess){
+		if(!words.contains(guess)){
+			System.out.println("Guess a word in the list.");
+			return;
+		}
 		if(guess.length() != targetWord.length()){
 			System.out.println("Guess a word of length " +targetWord.length());
 			return;
